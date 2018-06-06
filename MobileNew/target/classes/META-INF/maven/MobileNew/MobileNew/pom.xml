@@ -1,0 +1,180 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>MobileNew</groupId>
+	<artifactId>MobileNew</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>MobileNew</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>5.0.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>1.0.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java8 -->
+		<!-- <dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java8</artifactId>
+			<version>1.2.4</version>
+		</dependency> -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>1.2.5</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>2.12.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>1.2.5</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>1.2.5</version>
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.picocontainer/picocontainer -->
+		<dependency>
+			<groupId>org.picocontainer</groupId>
+			<artifactId>picocontainer</artifactId>
+			<version>2.15</version>
+		</dependency>
+	</dependencies>
+
+	<!-- <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build> -->
+	<!-- <build> <plugins> <plugin> <artifactId>maven-compiler-plugin</artifactId> 
+		<version>3.3</version> <configuration> <source>1.6</source> <target>1.6</target> 
+		</configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <version>${surefire.maven.plugin.version}</version> 
+		<executions> <execution> <id>acceptance-test</id> <phase>integration-test</phase> 
+		<goals> <goal>test</goal> </goals> <configuration> <forkCount>${acceptance.test.parallel.count}</forkCount> 
+		<reuseForks>true</reuseForks> <includes> <include>**/*IT.class</include> 
+		</includes> </configuration> </execution> </executions> </plugin> <plugin> 
+		<artifactId>maven-resources-plugin</artifactId> <version>2.7</version> <executions> 
+		<execution> <id>copy-resources</id> here the phase you need <phase>validate</phase> 
+		<goals> <goal>copy-resources</goal> </goals> <configuration> <outputDirectory>target/test-classes/com/yourcompany</outputDirectory> 
+		<resources> <resource> <directory>src/test/resources</directory> <filtering>true</filtering> 
+		</resource> </resources> </configuration> </execution> </executions> </plugin> 
+		<plugin> <groupId>com.github.temyers</groupId> <artifactId>cucumber-jvm-parallel-plugin</artifactId> 
+		<version>${cucumber.jvm.parallel.version}</version> <executions> <execution> 
+		<id>generateRunners</id> <phase>validate</phase> <goals> <goal>generateRunners</goal> 
+		</goals> <configuration> Mandatory comma separated list of package names 
+		to scan for glue code <glue>com.yourcompany.step.definitions</glue> These 
+		are the default values Where to output the generated Junit tests <outputDirectory>${project.build.directory}/generated-test-sources/features 
+		</outputDirectory> The diectory containing your feature files. <featuresDirectory>src/test/resources/features/</featuresDirectory> 
+		Directory where the cucumber report files shall be written <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir> 
+		comma separated list of output formats <format>html</format> CucumberOptions.strict 
+		property <strict>true</strict> CucumberOptions.monochrome property <monochrome>true</monochrome> 
+		The tags to run, maps to CucumberOptions.tags property <tags>"~@ignore"</tags> 
+		If set to true, only feature files containing the required tags shall be 
+		generated. Excluded tags (~@notMe) are ignored. <filterFeaturesByTags>true</filterFeaturesByTags> 
+		</configuration> </execution> </executions> </plugin> </plugins> </build> -->
+</project>
